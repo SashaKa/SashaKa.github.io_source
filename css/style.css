@@ -1,29 +1,30 @@
 body {
     background-color: #fefefd;
     color: #56534c;
-    font-family: "ClearSansRegular", sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     font-style: normal;
 }
 
 p {
-    font-family: "ProximaNovaRegular", sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 0.875rem;
     line-height: 1.5rem;
 }
 h2 {
-     font-family: "ClearSansBold", sans-serif;
+     font-family: "Ubuntu", sans-serif;
      font-size:3rem;
      line-height: 3.35rem;
      text-align: center;
      margin-top: 0;
 }
 h4 {
-    font-family: "ClearSansBold", sans-serif;
-    color: #a78365;
-    font-size: 0.875rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-style: italic;
     line-height:  1.875rem;
     text-align: center;
+    font-weight: 700;
 }
 a {
     text-decoration: none;
@@ -165,7 +166,8 @@ header {
     color: #e2dfdd;
     padding: 0.5rem;
     line-height: 1.5rem;
-    font-family: "ClearSansBold", sans-serif;
+    font-family: "Ubuntu", sans-serif;
+
 }
 .main-link:hover{
     color: #e65100;
@@ -408,7 +410,7 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: url(../img/Burlap.jpg) no-repeat;
+    background: url(../img/wax.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 
@@ -720,7 +722,7 @@ header {
 .name-document {
     font-size: 1.875rem;
     line-height: 1.875rem;
-    font-family: "ClearSansBold", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     color: #ffffff;
     background-color: transparent;
     padding: 0.6rem 1.2rem;
@@ -784,6 +786,7 @@ header {
         -ms-flex-align: center;
             align-items: center;
     margin: 0.5rem 0;
+    text-align: center;
 }
 .distributer-card h4 {
     color: #ffc650;
