@@ -169,14 +169,23 @@ header {
     font-family: "Ubuntu", sans-serif;
 
 }
-.main-link:hover{
-    color: #e65100;
+ .sub-link {
+     color: #333;
+ }
+.main-link:hover,
+.sub-link:hover {
+    color: #333;
     background-color:#ffb74d;
     border-radius: 3px;
 
 }
 .main-link:active {
     color: #1565c0;
+}
+.main-menu li:nth-child(2):hover .sub-nav {
+    display: block;
+    color: #333333;
+
 }
 .header-nav {
     background-color:rgba(97, 97, 97, 0.54);
@@ -193,6 +202,29 @@ header {
         -ms-flex-align: center;
             align-items: center;
 }
+/*---------sub-menu-------------*/
+.sub-nav {
+    top: 30px;
+    background-color: rgba(249, 183, 8, 0.93);
+    left: 8px;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: inline-block;
+    width: 13rem;
+    z-index: 2;
+    display: none;
+
+}
+
+
+
+
+
+
+/*--------social button--------*/
 
 .social {
     font-size: 0;
@@ -806,6 +838,7 @@ header {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 42.8125%;
             flex: 1 1 42.8125%;
+            margin: 0.9rem;
 }
 /*----------MEDIA QUARIES------------------*/
 @media screen and (max-width: 840px) {
