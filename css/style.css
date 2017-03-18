@@ -662,6 +662,47 @@ header {
             flex: 1 1 42.8125%;
             margin: 0.9rem;
 }
+/*--------footer-----------*/
+footer  {
+    background: url(../img/wood.jpg) no-repeat;
+    background-position: 50% 15%;
+    -ms-background-size: cover;
+    background-size: cover;
+}
+footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+}
+footer .social,
+.contacts {
+    flex: 1 1 30%;
+    background-color: rgba(97, 97, 97, 0.63);
+    border-radius: 5px;
+
+}
+footer .social {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
+footer p {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+footer .logo {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+}
+
 /*----------MEDIA QUARIES------------------*/
 @media screen and (max-width: 840px) {
     .map {
