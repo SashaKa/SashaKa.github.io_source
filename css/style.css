@@ -31,15 +31,11 @@ a {
     text-decoration: none;
 }
 .container {
-    max-width: 77em;
-    width: 90%;
+    max-width: 97em;
+    width: 100%;
     margin: 0 auto;
 }
-@media screen and (min-width: 560px) {
-.container {
-    width: 98%;
-    }
-}
+
 /*------------------------*HEADER------------------------------*/
 header {
     display: -webkit-box;
@@ -156,38 +152,6 @@ header {
 }
 
 /*---------------main-menu---------------*/
-.main-menu li {
-    list-style: none;
-    display: inline-block;
-    padding: 0 0.5rem;
-    position: relative;
-}
-.main-link {
-    color: #e2dfdd;
-    padding: 0.5rem;
-    line-height: 1.2rem;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-
-}
- .sub-link {
-     color: #333;
- }
-.main-link:hover{
-    color: #333;
-    background: -webkit-linear-gradient(bottom, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
-    background: linear-gradient(to top, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
-    border-radius: 3px;
-
-}
-.main-link:active {
-    color: #1565c0;
-}
-.main-menu li:nth-child(2):hover .sub-nav {
-    display: block;
-    color: #333333;
-}
 .header-nav {
     background-color:rgba(97, 97, 97, 0.54);
     display: -webkit-box;
@@ -203,30 +167,62 @@ header {
         -ms-flex-align: center;
             align-items: center;
 }
+.main-menu li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 0.5rem;
+    position: relative;
+}
+.main-link {
+    color: #e2dfdd;
+    padding: 0.5rem;
+    line-height: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+
+}
+ .sub-link {
+     color: #333;
+ }
+.main-link:hover{
+    color: #fff;
+    border-radius: 3px;
+
+}
+.main-link:active {
+    color: #1565c0;
+}
+.main-menu li:nth-child(2):hover .sub-nav {
+    display: block;
+    color: #333333;
+}
+
 /*---------sub-menu-------------*/
 .sub-nav {
     top: 34px;
-    background: -webkit-linear-gradient(top, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
-    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
+    background-color:rgba(97, 97, 97, 0.54);
     left: 8px;
     border-radius: 5px;
     padding-left: 0px;
-    padding-right: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
     display: inline-block;
-    width: 13rem;
+    width: 7rem;
     z-index: 2;
     display: none;
     position: absolute;
 
+}
+.sub-link {
+    color: #ffffff;
 }
 .sub-nav li {
     padding: 0.5rem;
 }
 .sub-nav li:hover{
     background-color: #e2dfdd;
-    border-radius: 3px;
+
 }
 /*--------social button--------*/
 
@@ -346,7 +342,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background: url(../img/smoker.jpg) no-repeat;
+    /*background: url(../img/smoker.jpg) no-repeat;*/
     background-position: 52% 46%;
     -ms-flex-pack: distribute;
         justify-content: space-around;
