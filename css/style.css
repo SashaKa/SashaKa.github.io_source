@@ -1,25 +1,26 @@
 body {
     background-color: #fefefd;
     color: #56534c;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-style: normal;
 }
 
 p {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 0.875rem;
     line-height: 1.5rem;
+    margin: 1rem 1.5rem;
 }
 h2 {
-     font-family: "Ubuntu", sans-serif;
+     font-family: 'Open Sans', sans-serif;
      font-size:3rem;
      line-height: 3.35rem;
      text-align: center;
-     margin-top: 0;
+     margin-top: 1.5rem;
 }
 h4 {
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
     font-style: italic;
     line-height:  1.875rem;
@@ -152,7 +153,6 @@ header {
     background-color:#f9c40a;
     border-radius: 2px;
 
-
 }
 
 /*---------------main-menu---------------*/
@@ -165,17 +165,19 @@ header {
 .main-link {
     color: #e2dfdd;
     padding: 0.5rem;
-    line-height: 1.5rem;
-    font-family: "Ubuntu", sans-serif;
+    line-height: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
 
 }
  .sub-link {
      color: #333;
  }
-.main-link:hover,
-.sub-link:hover {
+.main-link:hover{
     color: #333;
-    background-color:#ffb74d;
+    background: -webkit-linear-gradient(bottom, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
+    background: linear-gradient(to top, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
     border-radius: 3px;
 
 }
@@ -185,7 +187,6 @@ header {
 .main-menu li:nth-child(2):hover .sub-nav {
     display: block;
     color: #333333;
-
 }
 .header-nav {
     background-color:rgba(97, 97, 97, 0.54);
@@ -204,8 +205,9 @@ header {
 }
 /*---------sub-menu-------------*/
 .sub-nav {
-    top: 30px;
-    background-color: rgba(249, 183, 8, 0.93);
+    top: 34px;
+    background: -webkit-linear-gradient(top, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
+    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
     left: 8px;
     border-radius: 5px;
     padding-left: 0px;
@@ -216,14 +218,16 @@ header {
     width: 13rem;
     z-index: 2;
     display: none;
+    position: absolute;
 
 }
-
-
-
-
-
-
+.sub-nav li {
+    padding: 0.5rem;
+}
+.sub-nav li:hover{
+    background-color: #e2dfdd;
+    border-radius: 3px;
+}
 /*--------social button--------*/
 
 .social {
@@ -300,7 +304,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 5% 25%;
+    margin: 5% 22%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;;
@@ -314,7 +318,7 @@ header {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border-radius: 3px;
     box-shadow: 2px 2px 3px #FF6D00;
     padding: 0.5rem;
@@ -393,6 +397,7 @@ header {
  }
 .text-block .avatar {
     text-align: center;
+    margin-bottom: 1.5rem;
 }
  .avatar img {
     border-radius: 50%;
@@ -504,7 +509,6 @@ header {
 .describe-product {
     text-align: center;
     display: block;
-    max-width: 40%;
     font-size: 1.2rem;
     color: rgb(20, 30, 3);
 }
@@ -516,189 +520,6 @@ header {
         align-self: center;
     margin-top: auto;
     position: relative;
-}
-/*---------slider img hexagon--------*/
-.hexagon1 {
-  position: relative;
-  width: 100px;
-  height: 57.74px;
-  margin: 28.87px 10px;
-  background-image: url(../img/honey1.jpg);
-  background-size: auto 115.4701px;
-  background-position: center;
-}
-.hexagon2 {
-  position: relative;
-  width: 100px;
-  height: 57.74px;
-  margin: 28.87px 10px;
-  background-image: url(../img/honey1.jpg);
-  background-size: auto 115.4701px;
-  background-position: center;
-}
-.hexTop1,
-.hexBottom1 {
-  position: absolute;
-  z-index: 1;
-  width: 70.71px;
-  height: 70.71px;
-  overflow: hidden;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background: inherit;
-  left: 14.64px;
-}
-.hexTop1:after,
-.hexBottom1:after {
-  content: "";
-  position: absolute;
-  width: 100.0000px;
-  height: 57.73502691896258px;
-  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  background: inherit;
-}
-.hexTop1 {
-  top: -35.3553px;
-}
-.hexTop1:after {
-  background-position: center top;
-}
-.hexBottom1 {
-  bottom: -35.3553px;
-}
-.hexBottom1:after {
-  background-position: center bottom;
-}
-.hexagon1:after {
-  content: "";
-  position: absolute;
-  top: 0.0000px;
-  left: 0;
-  width: 100.0000px;
-  height: 57.7350px;
-  z-index: 2;
-  background: inherit;
-}
-.hexagon2 {
-  position: relative;
-  width: 100px;
-  height: 57.74px;
-  margin: 28.87px 0;
-  background-image: url(../img/honey1.jpg);
-  background-size: auto 115.4701px;
-  background-position: center;
-}
-.hexTop2,
-.hexBottom2 {
-  position: absolute;
-  z-index: 1;
-  width: 70.71px;
-  height: 70.71px;
-  overflow: hidden;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background: inherit;
-  left: 14.64px;
-}
-.hexTop2:after,
-.hexBottom2:after {
-  content: "";
-  position: absolute;
-  width: 100.0000px;
-  height: 57.73502691896258px;
-  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  background: inherit;
-}
-.hexTop2 {
-  top: -35.3553px;
-}
-.hexTop2:after {
-  background-position: center top;
-}
-
-.hexBottom2 {
-  bottom: -35.3553px;
-}
-
-.hexBottom2:after {
-  background-position: center bottom;
-}
-
-.hexagon2:after {
-  content: "";
-  position: absolute;
-  top: 0.0000px;
-  left: 0;
-  width: 100.0000px;
-  height: 57.7350px;
-  z-index: 2;
-  background: inherit;
-}
-.hexagon3 {
-  position: relative;
-  width: 100px;
-  height: 57.74px;
-  margin: 28.87px 10px;
-  background-image: url(../img/honey1.jpg);
-  background-size: auto 115.4701px;
-  background-position: center;
-}
-.hexTop3,
-.hexBottom3 {
-  position: absolute;
-  z-index: 1;
-  width: 70.71px;
-  height: 70.71px;
-  overflow: hidden;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background: inherit;
-  left: 14.64px;
-}
-.hexTop3:after,
-.hexBottom3:after {
-  content: "";
-  position: absolute;
-  width: 100.0000px;
-  height: 57.73502691896258px;
-  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  background: inherit;
-}
-
-.hexTop3 {
-  top: -35.3553px;
-}
-
-.hexTop3:after {
-  background-position: center top;
-}
-
-.hexBottom3 {
-  bottom: -35.3553px;
-}
-
-.hexBottom3:after {
-  background-position: center bottom;
-}
-
-.hexagon3:after {
-  content: "";
-  position: absolute;
-  top: 0.0000px;
-  left: 0;
-  width: 100.0000px;
-  height: 57.7350px;
-  z-index: 2;
-  background: inherit;
 }
 .slider-doc img {
 
@@ -754,21 +575,22 @@ header {
 .name-document {
     font-size: 1.875rem;
     line-height: 1.875rem;
-    font-family: "Ubuntu", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #ffffff;
-    background-color: transparent;
+    background-color:rgb(145, 124, 107);
     padding: 0.6rem 1.2rem;
     outline-color: #dfc691;
     border-radius: 0.3rem;
     cursor: pointer;
+    border-color: #f2af02;
 }
 .name-document:hover {
-    color: #454859;
-    background-color: #ffffff;
+    color: #fefefd;
+    background-color: rgba(223, 169, 43, 0.68);
 }
 .name-document:active {
     color: #363946;
-    background-color:#dfc691;
+
 }
 #distributers{
     background-color:#e3dfd6;
