@@ -49,7 +49,7 @@ header {
             align-items: center;
     overflow: hidden;
     background: url(../img/honey2.jpg)  no-repeat;
-    background-position: 50% 15%;
+    background-position: center;;
     -ms-background-size: cover;
     background-size: cover;
 }
@@ -174,7 +174,7 @@ header {
     position: relative;
 }
 .main-link {
-    color: #e2dfdd;
+    color: #f6f5f3;
     padding: 0.5rem;
     line-height: 1.2rem;
     font-family: 'Open Sans', sans-serif;
@@ -200,28 +200,31 @@ header {
 
 /*---------sub-menu-------------*/
 .sub-nav {
-    top: 34px;
-    background-color:rgba(97, 97, 97, 0.54);
-    left: 8px;
-    border-radius: 5px;
+    top: 22px;
+    background-color: #e2dfdd;
+    left: 10px;
+    border-radius: 3px;
     padding-left: 0px;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
     display: inline-block;
-    width: 7rem;
+    min-width: 7rem;
     z-index: 2;
     display: none;
     position: absolute;
 
 }
 .sub-link {
-    color: #ffffff;
+    color: #000000;
+}
+.sub-link:first-child {
+    padding-right: 4.9rem;
 }
 .sub-nav li {
-    padding: 0.5rem;
+    padding: 0.5rem 0.3rem;
 }
 .sub-nav li:hover{
-    background-color: #e2dfdd;
+    background-color:rgba(97, 97, 97, 0.54);
 
 }
 /*--------social button--------*/
@@ -300,15 +303,16 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 5% 22%;
+    margin: 20% 23%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;;
-    color: #e2dfdd;
+    color: #f6f5f3;
     background-color: rgba(97, 97, 97, 0.39);
 }
 .promo h3 {
     text-align: center;
+    margin: 3.5rem;
 }
 .product {
     -ms-flex-item-align: center;
@@ -316,26 +320,22 @@ header {
         align-self: center;
     margin-bottom: 2rem;
     border-radius: 3px;
-    box-shadow: 2px 2px 3px #FF6D00;
+    box-shadow: 2px 2px 3px  rgba(0, 0, 0, 0.65);
     padding: 0.5rem;
     text-decoration: none;
-    color: #424242;
+    color: rgb(238, 238, 238);
     font-weight: 800;
-    background: -webkit-linear-gradient(top, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
-    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.91) 0%, #FF6D00 100%);
+    background-color:  rgba(0, 0, 0, 0.44);
 }
 .product:hover{
-    background: -webkit-linear-gradient(top, #FF6D00 0%,rgba(255, 204, 0, 0.91) 100%);
-    background: linear-gradient(to bottom, #FF6D00 0%,rgba(255, 204, 0, 0.91) 100%);
-    color: #e2dfdd;
-    box-shadow: 2px 2px 3px #FF6D00;
+    background-color: rgb(238, 238, 238);
+    color: rgba(0, 0, 0, 0.44);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.65);
 }
 .product:active{
-    background: -webkit-linear-gradient(top, #616161 0%,#e0e0e0 100%);
-    background: linear-gradient(to bottom, #616161 0%,#e0e0e0 100%);
-    color: #424242;
+    background-color: rgb(238, 238, 238);
     outline: none;
-    box-shadow: 2px 2px 3px #424242;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.65);
 }
 /*-----------------------------MAIN----------------------*/
 #aboutus {
@@ -372,9 +372,8 @@ header {
         -ms-flex: 1 1 36%;
             flex: 1 1 36%;
     margin: 1.5rem 3rem;
-    background-color: rgba(223, 169, 43, 0.68);
     padding: 0.1rem 1.2rem;
-    color: #e2dfdd;
+    color: #333;
  }
  @media screen and (max-width: 760px) {
      .text-block {
@@ -443,9 +442,9 @@ header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background: url(../img/wax.jpg) no-repeat;
+    /*background: url(../img/wax.jpg) no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover;*/
 
 }
 .wrap-block {
@@ -488,7 +487,6 @@ header {
         -ms-flex-align: center;
             align-items: center;
     padding: 1rem 0.5rem;
-    background-color: rgba(176, 139, 100, 0.72);
 }
 .title-product {
     padding-bottom: 0.5rem;
@@ -551,10 +549,10 @@ header {
                 flex: 1 1 30%;
         margin: 0.9rem;
         text-align: center;
-        background-color: rgba(130, 100, 77, 0.72);
+        background-color: rgba(255, 255, 255, 0.38);
 }
 .wrap-doc-info .annotation {
-    color: #f2af02;
+    color: #263947;
     font-size: 1.2rem;
     font-weight: 800;
 
@@ -572,20 +570,20 @@ header {
     font-size: 1.875rem;
     line-height: 1.875rem;
     font-family: 'Open Sans', sans-serif;
-    color: #ffffff;
-    background-color:rgb(145, 124, 107);
+    color: rgba(56, 54, 54, 0.97);
+    background-color: rgba(255, 246, 213, 0.48);
     padding: 0.6rem 1.2rem;
     outline-color: #dfc691;
     border-radius: 0.3rem;
     cursor: pointer;
-    border-color: #f2af02;
+    box-shadow: 2px 2px #21435e;
 }
 .name-document:hover {
     color: #fefefd;
-    background-color: rgba(223, 169, 43, 0.68);
+    background-color: rgba(0,0,0,.4);
 }
 .name-document:active {
-    color: #363946;
+    color: rgba(255,246,213,.4);
 
 }
 #distributers{
@@ -680,7 +678,6 @@ footer .container {
 footer .social,
 .contacts {
     flex: 1 1 30%;
-    background-color: rgba(97, 97, 97, 0.63);
     border-radius: 5px;
 
 }
@@ -690,7 +687,7 @@ footer .social {
     padding-top: 1rem;
 }
 footer p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #ffffff;
 }
 footer .logo {
