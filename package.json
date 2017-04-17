@@ -1,8 +1,8 @@
 {
   "name": "sashaka",
   "version": "1.0.0",
-  "description": "honeu page",
-  "main": "Honey.js",
+  "description": "honey page",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
