@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Industrial</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link  href="css/minireset.min.css" rel="stylesheet">
+    <link  href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="site-wrapper">
+        <header class="header">
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="logo">
+            </div>
+            <div class="menu__mobile">
+                <div class="menu__burger">
+                    <span class="menu__stripe"></span>
+                    <span class="menu__stripe"></span>
+                    <span class="menu__stripe"></span>
+                </div>
+                <ul class="menu__list-mobile">
+                    <li class="menu__item"><a href="#" class=" link menu__link">About</a></li>
+                    <li class="menu__item"><a href="#" class="link menu__link">Search</a></li>
+                    <li class="menu__item"><a href="#" class="link menu__link">Contact</a></li>
+                    <li class="menu__item"><a href="#" class=" link menu__link">Facebook</a></li>
+                    <li class="menu__item"><a href="#" class="link menu__link">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="header__search">
+                <input class="header__input-search" placeholder ="Search" type="text">
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__offer">
+                <h2 class="main__offer-title">Gina</h2>
+                <p class="main__offer-description">A coffee instrument combining classic coffee techniques with the latest technology</p>
+                <button class="button main__offer-button offer-button-for-sale">Shop Now</button>
+            </div> 
+            <div class="main__goods">
+                <div class="main__goods-item first-good">
+                    <h2 class="main__goods-title">Beoplay A1</h2>
+                    <p class="main__goods-description">The ultra-portable Bluetooth speaker that will travel with you anywhere</p>
+                    <button class="button main__goods-button ">Buy</button>
+                </div>
+                <div class="main__goods-item second-good">
+                    <h2 class="main__goods-title ">Leica MP</h2>
+                    <p class="main__goods-description">Focused technology for focused photography</p>
+                    <button class=" button main__goods-button lite-button">Buy</button>
+                </div>
+            </div>
+            <div class="main__list">
+                <div class="main__list-item first-item">
+                    <p class="main__list-description">The world’s first molecular air purifier.</p>
+                    <h2 class="main__list-title">Molekule</h2>
+                    <button class=" button main__list-button">Details</button>
+                </div>
+                <div class="main__list-item second-item">
+                    <p class="main__list-description">Bowers & Wilkins</p>
+                    <h2 class="main__list-title">P9 Signature</h2>
+                    <button class="button main__list-button lite-button">Details</button>
+                </div>
+                <div class="main__list-item third-item">
+                    <p class="main__list-description">An homage to Dieter Rams</p>
+                    <h2 class="main__list-title">DR-II</h2>
+                    <button class="button main__list-button">Details</button>
+                </div>
+            </div>
+        </main>
+        <div class="subscribe">
+            <div class="subscribe__appile">
+                <p class="subscribe__appile-title">Get our freshest content delivered to your inbox</p>
+                <p class="subscribe__appile-text">For the latest stories, news, events, promotions and exclusive offers, sign up today. We know you get a lot of emails, but we promise... ours is the one you want.</p>
+            </div>
+            <form action="#" class="subscribe__form">
+                <input class="subscribe__form-input" type="text" placeholder="Your e-mail">
+                <button type="submit" class=" button subscribe__form-button">subscribe</button>
+            </form>
+        </div>
+        <footer class="footer">
+            <nav class="footer__menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="link menu__link">About</a></li>
+                    <li class="menu__item">
+                        <a href="#" class=" link menu__link">Contact</a></li>
+                    <li class="menu__item">
+                        <a href="#" class=" link menu__link">Search</a></li>
+                    <li class="menu__item">
+                        <a href="#" class="link menu__link">Facebook</a></li>
+                    <li class="menu__item">
+                        <a href="#" class="link menu__link">Twitter</a></li>
+                </ul>
+            </nav>
+            <div class="footer__copyright">
+                <a href="" class="link ">© Industrial Design Magazine</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+       const burger = document.querySelector( '.menu__burger')
+       const mobileMenu = document.querySelector('.menu__list-mobile')
+
+       burger.addEventListener('click' , () => {
+           if(!burger.classList.contains('menu-on')) {
+               burger.classList.add('menu-on')
+               mobileMenu.classList.add('show-menu')
+           } else if (burger.classList.contains('menu-on')) {
+               burger.classList.remove('menu-on')
+               mobileMenu.classList.remove('show-menu')
+           }
+       })
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic" rel="stylesheet">
+    <title>Новый заказ</title>
+</head>
+<body>
+    <form class="add-task-form" id="form">
+        <h2 class="title-form">Новый заказ</h2>
+        <div class="right-col">
+            <div class="date-input-wrap">
+                <input class="input-field date-input" id="date-implementation" type="text" placeholder="30 сентября 2017" value=""> 
+                <label class="top-placeholder" for="date-implementation">Срок выполнения</label>
+                <span class="img-calendar"></span>
+            </div>
+            <span class="capture-for-task">Сообщите нам всё, что необходимо знать для успешного выполнения работы</span>
+        </div>
+        <div class="left-col">
+            <div class="input-wrap">
+                <input class="input-field" type="text" id="input-work" placeholder="Тип работы"/>
+                <label class="top-placeholder" for="input-work">Тип работы</label>
+                <button type="button" id="button-work" class="user-btn hidden" >Изменить</button>
+            </div>
+            <div class="input-wrap">
+                <input class="input-field" type="text" id="input-type"placeholder="Тип работы"/>
+                <label class="top-placeholder" for="input-type">Тип работы</label>
+                <button type="button" id="button-type" class="user-btn hidden">Изменить</button>
+            </div>
+            <div class="input-wrap">
+                <input class="input-field" type="text" id="input-title" placeholder="Заголовок" />
+                <label class="top-placeholder" for="input-title">Заголовок</label>
+                <button type="button" id="button-title" class="user-btn hidden">Изменить</button>
+            </div>
+            <div class="input-wrap">
+                <textarea class="input-field" rows="9" cols="67" id="capture-task">В данном случае можно согласиться с А.А. Земляковским и румынским исследователем Альбертом Ковачем, считающими, что диалогический контекст абсурдно осознаёт палимпсест. Комбинаторное приращение выбирает мелодический символ. Генеративная поэтика недоступно нивелирует не-текст, об этом свидетельствуют краткость и завершенность формы, бессюжетность, своеобразие тематического развертывания.</textarea>
+                <label class="top-placeholder" for="capture-task">Задание</label>
+            </div>
+            <div class="input-wrap file-input">
+                <span class="file-field">Файлы (при наличии)</span>
+                <p class="file-name">IndZad_2,3__Variant_22_2xxi895p9w1s.PDF<span class="close-btn"></span></p>
+                <p class="file-name">IndZad_2,3__Variant_22_2xxi895p9w1s.PDF<span class="close-btn"></span></p>
+                <p class="file-name">IndZad_2,3__Variant_22_2xxi895p9w1s.PDF<span class="close-btn"></span></p>
+                <button type="button" class="user-btn upload-files">Добавить файлы</button>
+            </div>
+            <div class="antiplagiarism">
+                <p class="title-forms-div">антиплагиат</p>
+                <input type="radio" id="antiplagiarism-on" name="antiplagiarism" value="antiplagiarism-on"/>
+                <label for="antiplagiarism-on">требуется</label>
+                <input type="radio"id="antiplagiarism-off" name="antiplagiarism" value="antiplagiarism-off" checked/>
+                <label for="antiplagiarism-off">не требуется</label>
+            </div>
+            <div class="doer-area">
+                <p class="title-forms-div">заказ увидят</p>
+                <input type="radio" id="all-doers" name="doers" value="all-doers">
+                <label for="all-doers">все исполнители</label>
+                <input type="radio" id="specific-doer" name="doers" value="specific-doer" checked>
+                <label for="specific-doer">конкретный исполнитель</label>
+            </div>
+            <div class="doer-profile">
+                <p class="title-forms-div">выбранный исполнитель</p>
+                <img src="img/man-13.jpg" alt="Исполнитель" class="doer-avatar"width="60" height="60">
+                <div class="doers-id">
+                    <span>исполнитель</span>
+                    <a class="doers-name" href="#">Иннокентий</a>
+                    <p class="id-number">ID1234567890</p>
+                </div>
+                <div class="rating-reviewrap">
+                    <span class="raiting">рейтинг:  2890</span>
+                    <span class="review">отзывы:</span>
+                    <a href="" class="positive-review">+200</a>
+                    <a href="" class="negative-review">-1</a>
+                    <p class="complited-task">выполнено заказов:  22890</p>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="user-btn form-submit">разместить заказ</button>
+    </form>
+    <script>
+        const inputTypeOfWork = document.getElementById('input-work')
+        const inputSomethingType = document.getElementById('input-type')
+        const inputTitleWork = document.getElementById('input-title')
+        const btnWork = document.getElementById('button-work')
+        const btnType = document.getElementById('button-type')
+        const btnTitle = document.getElementById('button-title')
+        const form = document.getElementById('form')
+
+        form.addEventListener('keydown', () => {
+            if (inputTypeOfWork.value.length > 0) {
+                btnWork.classList.remove('hidden')
+                btnWork.classList.add('visible')
+            } else {
+                btnWork.classList.remove('visible')
+                btnWork.classList.add('hidden')
+            }
+            if (inputSomethingType.value.length > 1) {
+                btnType.classList.remove('hidden')
+                btnType.classList.add('visible')
+            } else {
+                btnType.classList.remove('visible')
+                btnType.classList.add('hidden')
+            }
+            if (inputTitleWork.value.length > 1) {
+                btnTitle.classList.remove('hidden')
+                btnTitle.classList.add('visible')
+            } else {
+                btnTitle.classList.remove('visible')
+                btnTitle.classList.add('hidden')
+            }
+        })
+    </script>
+</body>
+</html>
