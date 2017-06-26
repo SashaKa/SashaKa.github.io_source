@@ -10,51 +10,89 @@
 </head>
 <body>  
     <div class="site-wrapper">
-        <header class="header"></header>
-        <main class="main">
-            <ul class="works-list">
-                <li class="works-list__item">
-                    <a href="../works/Industrial/main.html" class="work-list__link">
-                        <img src="img/industrial.png" alt="responsive Industrial" class="works-screen">
-                        <span class="work-list__title">something about work</span>
-                    </a>
-                </li>
-                <li class="works-list__item">
-                    <a href="../works/Honey_page/build/index.html" class="work-list__link">
-                        <img src="img/honey.png"  alt="responsive" class="works-screen">
-                        <span class="work-list__title">something about work</span>
-                    </a>
-                </li>
-                <li class="works-list__item">
-                    <a href="../works/Gllacy/index.html" class="work-list__link">
-                        <img src="img/gllacy.png" class="works-screen">
-                        <span class="work-list__title">something about work</span>
-                    </a>
-                </li>
-                <li class="works-list__item">
-                    <a href="../works/form_example/form.html" class="work-list__link">
-                        <figure>
-                            <img src="img/form.png" alt="form" class="works-screen">
-                            <span class="work-list__title">something about work</span>
-                        </figure>
-                    </a>
-                </li>
-                <li class="works-list__item">
-                    <a href="../works/questionaire/index.html" class="work-list__link">
-                        <img src="img/qustionaire.png"  alt="form_js" class="works-screen">
-                        <span class="work-list__title">something about work</span>
-                    </a>
-                </li>
-                <li class="works-list__item">
-                    <a href="../works/Kerner_test/kerner.html" class="work-list__link">
-                        <img src="img/kerner.png" alt="lebedev
-                        -studio"  class="works-screen">
-                        <span class="work-list__title">something about work</span>
-                    </a>
-                </li>
+        <header class="header">
+             <div class="menu__mobile-logo"><span class="burger-img"></span>
+                <ul class="menu__list-mobile">
+                    <li class="menu__item-mobile"><a href="#works" class="menu__link">Мои работы</a></li>
+                    <li class="menu__item-mobile"><a href="#skills" class="menu__link">Навыки</a></li>
+                    <li class="menu__item-mobile"><a href="#about" class="menu__link">Обо мне</a></li>
+                </ul>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#info" class="menu__link">Мои работы</a></li>
+                <li class="menu__item"><a href="#skills" class="menu__link">Навыки</a></li>
+                <li class="menu__item"><a href="#about" class="menu__link">Обо мне</a></li>
             </ul>
+        </header>
+        <main class="main">
+            <section id="works">
+                <ul class="works-list">
+                    <li class="works-list__item">
+                        <a href="../works/Industrial/main.html" class="work-list__link">
+                            <img src="img/industrial.png" alt="responsive Industrial" class="works-screen">
+                            <h3 class="work-list__title">Интернет-магазин необычных товаров.</h3>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a href="../works/form_example/form.html" class="work-list__link">
+                            <img src="img/form.jpg" alt="form" class="works-screen">
+                            <h3 class="work-list__title">Пример кастомизированной формы.</h3>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a href="../works/Honey_page/build/index.html" class="work-list__link">
+                            <img src="img/honey.jpg"  alt="responsive" class="works-screen">
+                            <h3 class="work-list__title">Одностраничный адаптивный сайт семейной пасеки в Горном Алтае.</h3>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a href="../works/questionaire/index.html" class="work-list__link">
+                            <img src="img/qustionaire.png"  alt="form_js" class="works-screen">
+                            <h3 class="work-list__title">Анкета для соискателя на вакансию front-end developer.</h3>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a href="../works/Gllacy/index.html" class="work-list__link">
+                            <img src="img/gllacy.jpg" class="works-screen">
+                            <h3 class="work-list__title">Сайт для продажи мороженого ручной работы.</h3>
+                        </a>
+                    </li>
+                    <!--<li class="works-list__item">
+                        <a href="../works/Kerner_test/kerner.html" class="work-list__link">
+                            <img src="img/kerner.png" alt="lebedev
+                            -studio"  class="works-screen">
+                            <h3 class="work-list__title">something about work</h3>
+                        </a>
+                    </li>-->
+                </ul>
+            </section>
+            <section id="skills"></section>
+            <section id="about"></section>
         </main>
         <footer class="footer"></footer>
     </div>
+    <script>
+        changeColor = () => {
+        setInterval(() => {
+            let random = Math.ceil(Math.random() * 360)
+               document.body.setAttribute('style', `background-color: hsl(${random}, 40%, 50%)`)
+        }, 3000)
+    }
+
+    const burger = document.querySelector( '.menu__mobile-logo')
+    const mobileMenu = document.querySelector('.menu__list-mobile')
+
+    burger.addEventListener('click' , () => {
+        if(!burger.classList.contains('menu-on')) {
+        burger.classList.add('menu-on')
+        mobileMenu.classList.add('show-menu')
+        burger.classList.add('animation-on')
+        } else if (burger.classList.contains('menu-on')) {
+        burger.classList.remove('menu-on')
+        mobileMenu.classList.remove('show-menu')
+        }
+    })
+
+changeColor()</script>
 </body>
 </html>
