@@ -209,16 +209,19 @@ body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
+.works-list__item:last-child {
+  margin: auto;
+}
 @media (min-width: 640px) and (max-width: 1023px) {
   .works-list__item {
-    width: -moz-calc(39.3%);
-    width: calc(39.3%);
+    width: -moz-calc(44.3%);
+    width: calc(44.3%);
   }
 }
 @media (min-width: 1024px) and (max-width: 2219px) {
   .works-list__item {
-    width: -moz-calc(29.3%);
-    width: calc(29.3%);
+    width: -moz-calc(39.3%);
+    width: calc(39.3%);
   }
 }
 .work-list__link {
