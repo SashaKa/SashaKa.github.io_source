@@ -10,11 +10,17 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=cyrillic');
 
 
+@main-color: #305a63;
+@text-color: 	#d6e5ab;
+@active-color: #9da15e;
+@shadow-color: 	#b0b881;
+
 * {
     box-sizing: border-box;
 }
 body {
-    background-color: hsl(100, 40%, 50%);
+    background-color: @main-color;
+    color: @text-color;
     font-size: 16px;
     line-height: 1.5;
     font-family:  'Source Sans Pro', sans-serif;
@@ -49,15 +55,15 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
-    color: rgb(34, 44, 66);
+    color: @text-color;
     position: relative;
     transition: all .2s cubic-bezier(0.54, -0.13, 0.52, 0.64);
 
     &:hover {
-        border-bottom: 3px solid rgb(34, 44, 66);
+        border-bottom: 3px solid @text-color;
     }        
     &:active { 
-        color: #ccb1f1;
+        color: @active-color;
     }
 
 }
@@ -65,16 +71,16 @@ body {
 .menu__list-mobile {
     visibility: hidden;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.34);
+    background-color: @main-color;
     top: 3rem;
     left: 5%;
-    width: 90vw;
+    width: 100vw;
     padding: 25px 15px;
     transition: left .3s;
     animation-duration: 3s;
     animation-name: slidein;
     list-style: none;
-    box-shadow: 0 0 10px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 4px @shadow-color ;
 }
 
 .menu__item-mobile {
@@ -94,7 +100,7 @@ body {
 
 .show-menu {
     visibility: visible;
-    left: 5%;
+    left: 0;
     z-index: 2;
 }
 
@@ -109,7 +115,7 @@ body {
     margin: 0 auto;
     background-color: transparent;
     border-radius: 50%;
-    box-shadow: 0 0 10px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px 4px @shadow-color;
 
 }
 .animation-on {
@@ -131,57 +137,99 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    flex-direction: column;
+    list-style: none;
     margin-top: 8rem;
 
-    .screen(640px, 2220px, {
-           flex-direction: row;
-        });
-    .screen(768px, 2220px, {
-        margin-top: 0.5rem;
-    });
-
+    @supports ( display: grid ) {
+        display: grid;
+        grid-gap: 4rem;
+        grid-template-columns: repeat(auto-fill, minmax(310px, 5fr));
+        grid-auto-rows: minmax(40vh, 310px);
+	}
 }
 
+@supports not ( display: grid ) {
+	.works-list__item {		
+		flex: 1 0 auto;
+		flex-wrap: wrap;
+		height: 30vh;
+		margin: .5rem;
+		max-width: 20rem;
+		min-width: 15rem;
+	}
+}
 .works-list__item {
-    width: calc(90% - 0.7rem);
-    margin: 3rem 1rem 6rem 1rem;
-    background-color: transparent;
-    padding: 0.5rem ;
-    list-style: none;
     position: relative;
-    box-shadow: 0 0 10px 4px rgba(0,0,0,0.2);
-    transition: all 0.2s;
-    flex: 1 1 auto;
-
-    &:last-child {
-        margin: auto;
+    
+    &:hover {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
     }
-
-     .screen(640px, 1024px, {
-           width: calc(45% - 0.7rem);
-        });
-
-    .screen(1024px, 2220px, {
-        width: calc(40% - 0.7rem);
-    });
 }
+
+
 .work-list__link {
     text-decoration: none;
-    color: #000;
-    padding: 1rem 2rem 1rem 0;
 
 }
+.link-img {
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    top: 15%;
+    opacity: 0; 
+    left: 40%;
+    background-color: @text-color;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
 .works-screen {
     object-fit: cover;
-    width: calc(100% + 0.5rem);
+    width: 100%;
     height: 100%;
+    transition: transform 0.4s;
+    border-radius: 7px;
+}
+
+.work-list__text-wrap {
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    padding: 1em;
+    background-color: @text-color;
+    color: @main-color;   
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+    opacity: 0;
+    display: flex;
+    flex: 1 0 auto;
+    align-items: baseline;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+.works-list__item:hover .work-list__text-wrap,
+.works-list__item:hover .link-img{
+       transform: translateY(0px);
+       transition: transform 0.4s, opacity 0.1s;
+       opacity: 1;
+}
+.works-list__item:hover .works-screen {
+    opacity: 0.4;
+    transform: translateY(-50px);
 }
 .work-list__title{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
-    height: 10%;
+    transition: transform 0.35s;
+    margin: 0;
 
+}
+.work-list__description {
+    margin-left: auto;
+    text-align: center;
 }

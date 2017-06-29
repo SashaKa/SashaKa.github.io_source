@@ -29,41 +29,55 @@
                 <ul class="works-list">
                     <li class="works-list__item">
                         <a href="../works/Industrial/main.html" class="work-list__link">
+                            <img class="link-img"src="img/eye.svg" alt="see">
                             <img src="img/industrial.png" alt="responsive Industrial" class="works-screen">
-                            <h3 class="work-list__title">Адаптивный интернет-магазин необычных товаров.</h3>
+                            <div class="work-list__text-wrap">
+                                <h3 class="work-list__title">Industrial</h3>
+                                <p class="work-list__description">Адаптивный сайт интернет-магазин необычных товаров.</p>
+                            </div>
                         </a>
                     </li>
                     <li class="works-list__item">
-                        <a href="../works/Honey_page/build/index.html" class="work-list__link">
+                        <a href="../works/Honey_page/index.html" class="work-list__link">
+                            <img class="link-img"src="img/eye.svg" alt="see">
                             <img src="img/honey.jpg"  alt="responsive" class="works-screen">
-                            <h3 class="work-list__title">Одностраничный адаптивный сайт семейной пасеки в Горном Алтае.</h3>
+                            <div class="work-list__text-wrap">
+                                <h3 class="work-list__title">Honey from Mounttain Altay</h3>
+                                <p class="work-list__description">Одностраничный адаптивный сайт семейной пасеки в Горном Алтае</p>
+                            </div>
                         </a>
                     </li>
                     <li class="works-list__item">
                         <a href="../works/form_example/form.html" class="work-list__link">
+                           <img class="link-img"src="img/eye.svg" alt="see">
                             <img src="img/form.jpg" alt="form" class="works-screen">
-                            <h3 class="work-list__title">Пример кастомизированной формы.</h3>
+                            <div class="work-list__text-wrap">
+                                <h3 class="work-list__title">Form Example</h3>
+                                <p class="work-list__description">Пример кастомизированной формы</p>
+                            </div>
                         </a>
                     </li>
                     <li class="works-list__item">
                         <a href="../works/questionaire/index.html" class="work-list__link">
+                            <img class="link-img"src="img/eye.svg" alt="see">
                             <img src="img/qustionaire.png"  alt="form_js" class="works-screen">
-                            <h3 class="work-list__title">Анкета для соискателя на вакансию front-end developer.</h3>
+                                <div class="work-list__text-wrap">
+                                <h3 class="work-list__title">Questionaire for developer</h3>
+                                <p class="work-list__description">Анкета для соискателя на вакансию front-end developer.</p>
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
                         </a>
                     </li>
                     <li class="works-list__item">
                         <a href="../works/Gllacy/index.html" class="work-list__link">
+                            <img class="link-img"src="img/eye.svg" alt="see">
                             <img src="img/gllacy.jpg" class="works-screen">
-                            <h3 class="work-list__title">Сайт для продажи мороженого ручной работы.</h3>
+                            <div class="work-list__text-wrap">
+                                    <h3 class="work-list__title">Gllacy shop</h3>
+                                    <p class="work-list__description">Сайт для продажи мороженого ручной работы.</p>
+                            </div>
                         </a>
                     </li>
-                    <!--<li class="works-list__item">
-                        <a href="../works/Kerner_test/kerner.html" class="work-list__link">
-                            <img src="img/kerner.png" alt="lebedev
-                            -studio"  class="works-screen">
-                            <h3 class="work-list__title">something about work</h3>
-                        </a>
-                    </li>-->
                 </ul>
             </section>
             <section id="skills"></section>
@@ -72,26 +86,19 @@
         <footer class="footer"></footer>
     </div>
     <script>
-        changeColor = () => {
-        setInterval(() => {
-            let random = Math.ceil(Math.random() * 360)
-               document.body.setAttribute('style', `background-color: hsl(${random}, 40%, 50%)`)
-        }, 3000)
-    }
+        const burger = document.querySelector( '.menu__mobile-logo')
+        const mobileMenu = document.querySelector('.menu__list-mobile')
 
-    const burger = document.querySelector( '.menu__mobile-logo')
-    const mobileMenu = document.querySelector('.menu__list-mobile')
-
-    burger.addEventListener('click' , () => {
-        if(!burger.classList.contains('menu-on')) {
-        burger.classList.add('menu-on')
-        mobileMenu.classList.add('show-menu')
-        burger.classList.add('animation-on')
-        } else if (burger.classList.contains('menu-on')) {
-        burger.classList.remove('menu-on')
-        mobileMenu.classList.remove('show-menu')
-        }
-    })
+        burger.addEventListener('click' , () => {
+            if(!burger.classList.contains('menu-on')) {
+            burger.classList.add('menu-on')
+            mobileMenu.classList.add('show-menu')
+            burger.classList.add('animation-on')
+            } else if (burger.classList.contains('menu-on')) {
+            burger.classList.remove('menu-on')
+            mobileMenu.classList.remove('show-menu')
+            }
+        })
 
 changeColor()</script>
 </body>
