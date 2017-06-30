@@ -296,3 +296,35 @@ body {
   margin-left: auto;
   text-align: center;
 }
+.about-social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2rem 15rem;
+}
+.social-title {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.social-link {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: 0 2rem;
+}
+.fa {
+  font-size: 5rem;
+  color: #d6e5ab;
+}
+.fa:hover {
+  color: #9da15e;
+}
