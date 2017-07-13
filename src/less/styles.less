@@ -135,12 +135,16 @@ body {
 
 
 // ------------------WORKS SECTION---------------------
+.main {
+    padding: 2%;
+}
 .works-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     list-style: none;
     margin-top: 8rem;
+    padding-left: 0;
 
     @supports ( display: grid ) {
         display: grid;
@@ -238,10 +242,14 @@ body {
 
 // -----------------SOCIAL-------------------------
 
-.about-social {
+.social-icons {
     display: flex;
     justify-content: center;
     margin: 2rem 15rem;
+
+    .screen(320px, 768px, {
+        margin: 1rem;
+    });
 }
 .social-title {
     text-align: center;
@@ -254,7 +262,7 @@ body {
     width: 60px;
     height: 60px;
     cursor: pointer;
-    margin: 0 2rem;
+    margin: 0 auto;
 }
 .fa {
     font-size: 5rem;
@@ -262,5 +270,31 @@ body {
 
     &:hover {
         color: @active-color;
+    }
+}
+.about-wrapper {
+    padding: 1rem; 
+    background-color: @main-color;
+    border-radius: 7px;
+    box-shadow: 0 1px 1px @shadow-color;
+}
+.about-text {
+    color: @text-color;
+    font-size: 1.2rem;
+    line-height: 1.8;
+
+}
+.about-link {
+    width: 1rem;
+    height: 1rem;
+    color: @text-color;
+    text-decoration: none;
+    
+    &:hover {
+        color: @shadow-color;
+    }
+
+    .fa {
+        font-size: 1.2rem;
     }
 }
