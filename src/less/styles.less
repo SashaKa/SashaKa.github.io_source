@@ -265,7 +265,7 @@ body {
     margin: 2rem 15rem;
 
     .screen(320px, 768px, {
-        margin: 1rem;
+        margin: 0.5rem;
     });
 }
 .social-title {
@@ -280,15 +280,36 @@ body {
     height: 60px;
     cursor: pointer;
     margin: 0 auto;
+    position: relative;
 }
-.fa {
-    font-size: 5rem;
-    color: @text-color;
-
+.social__icon{
+    font-size: 1rem;
+    position: absolute;
+    display: inline-block;
+    width:70px;
+    height: 70px;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+}
+.github {
+    background-position: -219px 1px;
     &:hover {
-        color: @active-color;
+        background-position: -219px -73px;
     }
 }
+.twitter {
+     background-position: -147px -145px;
+    &:hover {
+        background-position: -147px -218px;
+    }
+}
+.telegram {
+     background-position: -219px -143px;
+    &:hover {
+        background-position:  -219px -218px;
+    }
+}
+
 .about-wrapper {
     padding: 1rem; 
     background-color:darken(@main-color, 5%);

@@ -287,7 +287,7 @@ body {
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .social-icons {
-    margin: 1rem;
+    margin: 0.5rem;
   }
 }
 .social-title {
@@ -301,13 +301,34 @@ body {
   height: 60px;
   cursor: pointer;
   margin: 0 auto;
+  position: relative;
 }
-.fa {
-  font-size: 5rem;
-  color: #d6e5ab;
+.social__icon {
+  font-size: 1rem;
+  position: absolute;
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-image: url(../img/sprite.png);
+  background-repeat: no-repeat;
 }
-.fa:hover {
-  color: #9da15e;
+.github {
+  background-position: -219px 1px;
+}
+.github:hover {
+  background-position: -219px -73px;
+}
+.twitter {
+  background-position: -147px -145px;
+}
+.twitter:hover {
+  background-position: -147px -218px;
+}
+.telegram {
+  background-position: -219px -143px;
+}
+.telegram:hover {
+  background-position: -219px -218px;
 }
 .about-wrapper {
   padding: 1rem;

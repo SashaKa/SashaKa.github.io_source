@@ -35,3 +35,4 @@ gulp.task('validate-html', () => {
     .pipe(plugins.htmlhint())
     .pipe(plugins.htmlhint.reporter())
 })
+
