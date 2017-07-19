@@ -143,6 +143,35 @@ body {
     transform: translateY(90deg);
   }
 }
+input[type=radio] {
+  opacity: 0;
+}
+.switch-lang {
+  display: inline-block;
+  margin: 3rem 0 1rem 0;
+  cursor: pointer;
+}
+.switch-lang:hover {
+  color: #9da15e;
+}
+#english:checked ~ .about-wrapper .english {
+  display: block;
+}
+#english ~ .about-wrapper .english {
+  display: none;
+}
+#english:checked ~ .about-wrapper .russian {
+  display: none;
+}
+#russian:checked ~ .about-wrapper .russian {
+  display: block;
+}
+#russian ~ .about-wrapper .russian {
+  display: none;
+}
+#russian:checked ~ .about-wrapper .english {
+  display: none;
+}
 .main {
   padding: 2%;
 }
