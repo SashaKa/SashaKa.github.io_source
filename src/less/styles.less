@@ -41,9 +41,9 @@ body {
 //  -------------------MENU-------------------------
 .menu__list {
     list-style: none;
+            display: none;
 
     .screen(320px, 768px, {
-            display: none;
         });
 
     .screen(768px, 2220px, {
@@ -52,7 +52,7 @@ body {
             justify-content: space-around;
         });
 }
-.menu__link{
+.menu__link {
     text-decoration: none;
     font-weight: 400;
     font-size: 1.6rem;
@@ -154,16 +154,26 @@ input[type=radio] {
 }
 .switch-lang { 
     display: inline-block;
-    margin: 3rem 0 1rem 0;
+    margin: 1rem 0;
     cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding: 1rem; 
+    background-color:darken(@main-color, 5%);
+    border-radius: 7px;
+    box-shadow: 2px 1px 0 0 #b0b881;
 
     &:hover {
         color: @active-color;
     }
+    &:checked {
+        color: @active-color;
+    }
+   
+
 
 }
-
-#english:checked ~ .about-wrapper .english{
+ #english:checked ~ .about-wrapper .english{
    display: block;
 }
 
@@ -173,14 +183,14 @@ input[type=radio] {
 #english:checked ~ .about-wrapper .russian {
     display: none;
 }
-#russian:checked ~ .about-wrapper .russian{
+#russian:checked ~  .about-wrapper .russian{
    display: block;
 }
 
 #russian ~ .about-wrapper .russian{
    display: none;
 }
-#russian:checked ~ .about-wrapper .english {
+#russian:checked  ~ .about-wrapper .english {
     display: none;
 }
 
@@ -327,6 +337,7 @@ input[type=radio] {
     background-image: url(../img/sprite.png);
     background-repeat: no-repeat;
 }
+
 .github {
     background-position: -219px 1px;
     &:hover {
