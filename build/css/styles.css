@@ -311,6 +311,31 @@ input[type=radio] {
   margin-left: auto;
   text-align: center;
 }
+@-webkit-keyframes fillup {
+  to {
+    stroke-dasharray: 158 158;
+  }
+}
+@keyframes fillup {
+  to {
+    stroke-dasharray: 158 158;
+  }
+}
+.top-right {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  background: #b0b881;
+  border-radius: 50%;
+  margin: 18% 40%;
+}
+.top-right-circle {
+  fill: #b0b881;
+  stroke: #305a63;
+  stroke-width: 115;
+  -webkit-animation: fillup 5s linear infinite;
+  animation: fillup 5s linear infinite;
+  stroke-dasharray: 118 48;
+}
 .social-icons {
   display: -webkit-box;
   display: -ms-flexbox;
