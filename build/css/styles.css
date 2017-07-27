@@ -9,8 +9,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: 'Source Sans Pro', sans-serif;
-  -webkit-transition: all 5s ease-out;
-  transition: all 5s ease-out;
 }
 .site-wrapper {
   margin: 0 auto;
@@ -176,29 +174,6 @@ input[type=radio] {
 }
 #russian:checked ~ .about-wrapper .english {
   display: none;
-}
-.russian,
-.english {
-  position: relative;
-}
-.russian:before,
-.english:before,
-.russian:after,
-.english:after {
-  content: "";
-  position: absolute;
-  width: 30%;
-  height: 1px;
-  left: 32%;
-  background-color: #d6e5ab;
-}
-.russian::before,
-.english::before {
-  top: -32px;
-}
-.russian::after,
-.english::after {
-  bottom: -32px;
 }
 .main {
   padding: 2%;
@@ -415,6 +390,11 @@ input[type=radio] {
 .about-wrapper {
   margin-top: 3rem;
   position: relative;
+}
+@media (min-width: 768px) and (max-width: 2219px) {
+  .about-wrapper {
+    padding: 0 5rem;
+  }
 }
 .about-text {
   color: #d6e5ab;

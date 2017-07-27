@@ -26,7 +26,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-family:  'Source Sans Pro', sans-serif;
-    transition: all 5s ease-out;
+   
 
 }
 .site-wrapper {
@@ -193,29 +193,6 @@ input[type=radio] {
 #russian:checked  ~ .about-wrapper .english {
     display: none;
 }
-
-.russian,
-.english {
-    position: relative;
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            width: 30%;
-            height: 1px;
-            left: 32%;
-            background-color: @text-color;
-
-        }
-        &::before {
-            top: -32px;
-
-    }
-    &::after{
-        bottom: -32px;
-    }
-}
-
 .main {
     padding: 2%;
 }
@@ -397,7 +374,12 @@ input[type=radio] {
 
 .about-wrapper {
     margin-top: 3rem;
+    
     position: relative;
+
+    .screen(768px, 2220px {
+         padding: 0 5rem;
+    });
 }
 .about-text {
     color: @text-color;
