@@ -106,15 +106,11 @@ body {
   width: 70px;
   height: 70px;
   display: block;
-  background: url('../img/burger.svg') no-repeat center;
+  background: url('../img/menu-button.svg') no-repeat center;
   background-size: cover;
   cursor: pointer;
   position: relative;
   margin: 0 auto;
-  background-color: transparent;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 0 10px 4px #b0b881;
-  box-shadow: 0 0 10px 4px #b0b881;
 }
 .animation-on {
   -webkit-animation: burger-rotate 0.4s;
