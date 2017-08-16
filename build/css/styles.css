@@ -105,6 +105,11 @@ input[type=radio] {
 .switch-lang:first-child {
   margin-left: 10%;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  .switch-lang:first-child {
+    margin-left: 0;
+  }
+}
 .switch-lang:hover {
   color: #9da15e;
   border-bottom: 2px solid #9da15e;
