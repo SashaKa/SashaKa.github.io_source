@@ -1,249 +1,156 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <title>Мёд из Шульгин-Лога</title>
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Sasha Coil</title>
 </head>
+<body>  
+    <div class="site-wrapper">
+        <header class="header">
+             <!-- <div class="menu__mobile-logo"><span class="burger-img"></span>
+                <ul class="menu__list-mobile">
+                    <li class="menu__item-mobile"><a href="#works" class="menu__link">Works</a></li>
+                    <li class="menu__item-mobile"><a href="#about" class="menu__link">
+                        About</a></li>
+                    <li class="menu__item-mobile"><a href="#social" class="menu__link">Contacts</a></li>
+                </ul>
+            </div> -->
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#info" class="menu__link">Works</a></li>
+                <li class="menu__item"><a href="#about" class="menu__link">About</a></li>
+                <li class="menu__item"><a href="#social" class="menu__link">Contacts</a></li>
+            </ul>
+        </header>
+        <main class="main">
+            <section id="about"> 
+                <label for="english" class="switch-lang">Eng</label>
+                <input type="radio" name="lang" id="english">
+                <label for="russian" class="switch-lang">Rus</label>
+                <input type="radio" name="lang" id="russian">  
+                <img src="img/photo-cv.jpg" alt="Саша Катушкова" class="about-photo">              
+                <div class="about-wrapper">
+                    <div class="russian">
+                        <h1 class="about-header">Привет! Меня зовут Саша, я начинающий фронт-енд разработчик.</h1>
+                        <p class="about-text">В конце 2016 года я начала изучать  верстку, заинтересовавшись веб-разработкой. Это оказалось очень интересным и затягивающим занятием.  
+                        <p class="about-text">Сейчас у меня есть навыки адаптивной и кроссбраузерной верстки. Применяю Java Script для внедрения пользовательских удобностей, но в дальнейшем хочу освоить этот язык много глубже. В работе использую методологию БЭМ, препроцессор Less, собираю проекты с помощью Gulp. Эта страничка сделана уже с помощью grid раскладки. Код можно посмотреть на <a href="https://github.com/SashaKa/SashaKa.github.io" class="about-link">Github
+                        </a>. Так же могу верстать адаптивные электронные письма. </p>
+                        <p class="about-text">Смело <a class="about-link" href="#social">пишите мне</a>, всегда рада знакомству и сотрудничеству с интересными людьми, профессионалами.</p>
+                        </p>
+                    </div>
+                    <div class="english">
+                        <h1 class="about-header">Hello! My name is Sasha, I'm a junior frontend developer.</h1>
+                        <p class="about-text ">
+                            At the end of 2016 I began to study CSS and HTML interested in web development. This turned out to be a very interesting and addictive work.</p>
+                        <p class="about-text ">
+                            Now I have the skills of adaptive and cross-browser layout. I use Java Script to implement UI features, but in the future I want to learn this language much better. In work I use BEM methodology Less and Gulp. This page is already done using the grid layout. The code can be viewed at <a href="https://github.com/SashaKa/SashaKa.github.io" class="about-link">
+                            Github</a>. I can also make responsive emails.
+                        </p>
+                        <p class="about-text">
+                            Feel free to <a class="about-link" href="#social">write to me,</a> always glad to get acquainted and cooperate with interesting people, professionals.
+                        </p>      
+                    </div>
+                </div> 
+            </section>
+            <section id="works">
+                <ul class="works-list">
+                    <li class="works-list__item">
+                        <a href="../works/Industrial/main.html" class="work-list__link">
+                            <img class="link-img" src="img/eye.svg" alt="see">
+                            <img src="img/industrial.png" alt="responsive Industrial" class="works-screen">
+                            <div class="work-list__text-wrap">
+                                <h3 class="work-list__title">Industrial</h3>
+                                <p class="work-list__description">Responsive site is an online store for unusual products.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a href="../works/Honey_page/index.html" class="work-list__link">
+                            <img class="link-img" src="img/eye.svg" alt="see">
+                            <img src="img/honey.jpg"  alt="responsive" class="works-screen">
+                            <div class="work-list__text-wrap">
+                                <h3 class="work-list__title">Honey from Mountain Altay</h3>
+                                <p class="work-list__description">Single-page responsive site for the family apiary in the Altai Mountains</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a href="../works/form_example/form.html" class="work-list__link">
+                            <img class="link-img" src="img/eye.svg" alt="see">
+                            <img src="img/form.jpg" alt="form" class="works-screen">
+                            <div class="work-list__text-wrap">
+                                <h3 class="work-list__title">Form Example</h3>
+                                <p class="work-list__description">An example of a customized form</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a href="../works/wikium/index.html" class="work-list__link">
+                            <img class="link-img" src="img/eye.svg" alt="see">
+                            <img src="img/wikium.jpg" class="works-screen">
+                            <div class="work-list__text-wrap">
+                                    <h3 class="work-list__title">Wikium</h3>
+                                    <p class="work-list__description">An example responsive layout</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="works-list__item">
+                        <a href="../works/Gllacy/index.html" class="work-list__link">
+                            <img class="link-img" src="img/eye.svg" alt="see">
+                            <img src="img/gllacy2.jpg" class="works-screen">
+                            <div class="work-list__text-wrap">
+                                    <h3 class="work-list__title">Gllacy shop</h3>
+                                    <p class="work-list__description">Not a responsive site for selling handmade ice cream.</p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- <li class="works-list__item">                 
+                        <svg class="top-right" width="100" height="100">
+                            <circle class="top-right-circle" r="25" cx="50" cy="50" />
+                        </svg> 
+                        <div class="work-list__text-wrap">
+                            <h3 class="work-list__title">Your's order</h3>
+                            <p class="work-list__description">Space for your's responsive page </p>
+                        </div>                   
+                    </li> -->
+                </ul>
+            </section>
+            <section id="social">
+                <p class="social-title">Text me!</p>
+                <div class="social-icons">
+                    <a href="https://github.com/SashaKa" class="social-link ">
+                        <span class="social__icon github"></span>
+                    </a>
+                    <a href="https://twitter.com/katu_sasha" class="social-link">
+                        <span class="social__icon twitter"></span>
+                    </a>
+                    <a href="https://t.me/SashaKa" class="social-link">
+                        <span class="social__icon telegram"></span>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <script>
+        const burger = document.querySelector( '.menu__mobile-logo')
+        const mobileMenu = document.querySelector('.menu__list-mobile')
 
-<body>
-    <header class="header-box">
-            <div class="header-nav">
-                <img src="img/bee.svg" class="logo" width="120" height="110" alt="Добрый мёд">
-                <nav class="main-menu">
-                    <ul>
-                        <li><a href="#aboutus" class="main-link">О нас</a></li>
-                        <li>
-                            <a href="#assortment" class="main-link">Продукция</a>
-                            <ul class="sub-nav">
-                                <li><a href="#assortment" class="sub-link">Мёд</a></li>
-                                <li><a href="#honeys-mix" class="sub-link">Медовые композиции</a></li>
-                                <li><a href="#candle-soap" class="sub-link">Свечи и мыло</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#quality" class="main-link">Качество</a></li>
-                        <li><a href="#distributers" class="main-link">Где купить</a></li>
-                    </ul>
-                </nav>
-                <div class="burger-menu">
-                    <div class="burger">
-                        <nav class="mobile-menu">
-                            <ul>
-                                <li><a href="#aboutus" class="mobile-link">О нас</a></li>
-                                <li>
-                                    <a href="#assortment" class="mobile-link">Продукция</a>
-                                    <ul class="sub-nav mobile-sub">
-                                        <li><a href="#assortment" class="mobile-link">Мёд</a></li>
-                                        <li><a href="#honeys-mix" class="mobile-link">Медовые композиции</a></li>
-                                        <li><a href="#candle-soap" class="mobile-link">Свечи и мыло</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#quality" class="mobile-link">Качество</a></li>
-                                <li><a href="#distributers" class="mobile-link">Где купить</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <section class="social">
-                    <a href="#" class="social-link"><img src="img/odnoklassniki.svg" alt="ok" class="social-icon"></a>
-                    <a href="https://vk.com/altaybees" class="social-link"><img src="img/vk.svg" alt="" class="social-icon"></a>
-                    <a href="https://www.facebook.com/Altaybees/" class="social-link"><img src="img/facebook.svg" alt="" class="social-icon"></a>
-                </section>
-            </div>
-            <div class="promo">
-                <h1 class="header-text">Мёд с традиционной семейной пасеки в Горном Алтае.</h1>
-                <h3 class="promo__post-header"> Мы такие разные, но у нас есть одно общее - наш Мёд, который мы добываем на пасеках Алтайского края, в селах Манжерок и Усть-Кокса<a href="#map" class="map-link"> (посмотреть на карте).</a>
-                </h3>
-                <a class="product-btn" href="#assortment">Продукты нашего труда</a>
-            </div>
-        
-    </header>
-    <main>
-        <section id="aboutus">
-            <article class="text-block">
-                <h2>Пчеловодство как искусство</h2>
-                <h4 class="annotation">Наша семья занимается пчеловождением несколько десятков лет, с любовью. </h4>
-                <p class="text-block-content">Алтай - это наша Родина! Это одно из красивейших мест на Земле. Его красота выражена не только в синеве голубого неба, яркости светящего над головой солнца, величественности гор и просторе степей, но и красоте человеческих душ и пылкости сердец всех тех, кто здесь живет!
-                Алтай - это красота, гармония и щедрость природы, дарами которой с благодарностью может воспользоваться каждый человек.
-                </p>
-                <h4>Хозяйка пасеки</h4>
-                <img class="aboutus-avatar" src="img/Tanya.jpg" width="168" height="228" alt="Таня">
-                <h4>Татьяна Назарова</h4>
-            </article>
-        </section>
-        <section id="assortment">
-            <div class="wrap-block">
-                <div class="wrap-img">
-                    <img class="product-img" src="img/honey1.jpg" width="448" height="299" alt="med raznotravie">
-                </div>
-                <div class="about-product">
-                    <h2 class="title-product">Мёд разнотравье</h2>
-                    <h4 class="annotation-product">Эталонный образец качественного меда.</h4>
-                    <p class="describe-product">В полях, где пчелы собирают нектар для этого меда, цветет много гречихи, а еще эспарцет, кипрей, подсолнечник... Состав меда сильно зависит от месяца качки.</p>
-                    <p class="describe-product">Сильный цветочно-травный аромат этого меда, мелкая зернистость, обеспечивающая благородную кремовую консистенцию, не оставят вас равнодушными. </p>                  
-                </div>
-            </div>
-            <div class="wrap-block">
-                <div class="wrap-img" id="honeys-mix">
-                    <img class="product-img" src="img/honey2.jpg" alt="med s pergoi">
-                </div>
-                <div class="about-product">
-                    <h2 class="title-product">Медовая композиция с пергой</h2>
-                    <h4 class="annotation-product">Вкусный мультивитамин</h4>
-                    <p class="describe-product">Перга (еще ее называют амброзией) - замечательное вещество, приготовленное пчелами из цветочной пыльцы с помощью особых ферментов. Пчелиная семья ферментирует пыльцу, делая ее стерильной, что очень пригождается  ранней весной, чтобы выкармливать  и витаминизировать всю рабочую братию.</p>
-                    <p class="describe-product">Перга имеет приятный кисловато-горький вкус, говорящий об ее высокой биологической ценности. Конечно, этот вкус прекрасно сочетается со вкусом меда, с которым перга смешана при низких оборотах до достижения приятной кремовой структуры.</p>
-                    <p class="describe-product">Небольшая баночка меда с пергой способна прекрасно подпитать вас и вашу семью множеством  полезных  и уникальных микроэлементов, улучшить состав крови, заменив собой химические витамины, что особенно актуально в городах, в период межсезонья.</p>
-                    <p class="describe-product"><b class="describe-product-attention">Перга менее аллергенна, чем цветочная пыльца, но если вы знаете, что склонны к аллергии на пыльцу, пожалуйста, кушайте мед с пергой с осторожностью, наблюдая за реакцией организма.</b></p>
-                </div>
-            </div>
-            <div class="wrap-block">
-                <div class="wrap-img">
-                    <img class="product-img" src="img/honey2.jpg" alt="med s pilcoi">
-                </div>
-                <div class="about-product">
-                    <h2 class="title-product">Медовая композиция с пыльцой</h2>
-                    <h4 class="annotation-product">Праздник вкуса и пользы</h4>
-                    <p class="describe-product">Оказаться в цветущем алтайском поле очень легко -- стоит открыть баночку, в которой живет крем-мед с пыльцой. Внутри вы обнаружите не только чудесный аромат тысяч дикорастущих и культурных растений, но и пользу, сублимированную ими в тончайшую пыльцу, заботливо собранную лапками пчел и дооставленную ими в улей.</p>
-                    <p class="describe-product">Затем, подсушенную пыльцу люди смешивают с медом на специальном оборудовании при низких оборотах, без нагревания сырья. Получившийся в итоге крем-мед не только повышает срок годности пыльцы (без смеси с медом она наиболее активна только в течение 3 месяцев после сбора), но и становится настоящим лакомством для тех, кто решил принимать пыльцу вместо витаминов. </p>
-                    <p class="describe-product">Такое пренебрежение к фармацевтике возможно, потому что пыльца-кладезь аминокислот и витаминок, жизненно необходимых всем, и особенно городским жителям в межсезонье. Она помогает иммунитету быть сильным, а настроению-весенним.</p>
-                    <p class="describe-product"><b class="describe-product-attention">Если вы знаете,что склонны к аллергии на пыльцу, пожалуйста, кушайте мед с пыльцой с осторожностью, наблюдая за реакцией организма.</b></p>
-                </div>   
-            </div>
-            <div class="wrap-block">
-                <div class="wrap-img">
-                    <img class="product-img" src="img/honey1.jpg" alt="med s propolisom">
-                </div>
-                <div class="about-product">
-                    <h2 class="title-product">Медовая композиция с прополисом</h2>
-                    <h4 class="annotation-product">Для любителей быстродействия</h4>
-                    <p class="describe-product">Прополис, содержащий многие необходимые человеку микроэлементы, флавоноиды, аминокислоты, может стать очень сильным помощником при борьбе с нежелательными микробными активностями в организме. Например, очень действенно бывает съесть ложечку меда с прополисом на ночь при першении в горле. Частенько, этой процедуры хватает, чтобы утром и не вспомнить о том, что горло болело.</p>
-                    <p class="describe-product">Этот крем-мед может удивить вас необычайно ярким,горько-терпким вкусом, от которого немного щипет во рту. Эти ощущения возникают из-за прополиса - одного из сильнейших природных противомикробных средств. Пчелы используют прополис в своем хозяйстве для разных целей, таких как обработка сот перед  откладкой новых яиц, герметизация улья, мумификация  и обеззараживаниие посторонних предметов. </p>
-                    <p class="describe-product"><b class="describe-product-attention">Если вы знаете,что склонны к аллергии, пожалуйста, кушайте мед с прополисом с осторожностью, наблюдая за реакцией организма. Прополис может вызвать аллергическую реакцию.</b></p>
-                </div>
-            </div>
-            <div class="wrap-block">
-                <div class="wrap-img">
-                    <img class="product-img" src="img/honey1.jpg" alt="med s kedrovoi givicei">
-                </div>
-                <div class="about-product">
-                    <h2 class="title-product">Медовая композиция с кедровой живицей</h2>
-                    <h4 class="annotation-product">Сибирский кедр в медовой оправе</h4>
-                    <p class="describe-product">Живица - смола, выступающая у дерева в месте повреждения коры для предотвращения заболеваний. Это удивительно мощное вещество, насыщенное терпентинами и обладающее сильным противомикробным действием.</p>
-                    <p class="describe-product">Специальным образом очищенная и смешанная с медом при низких оборотах живица кедра, может применяться не только как отлично тонизирующее средство, но так же при сильных воспалительных процессах. Мед с кедровой живицей можно есть как биодобавку к пище (по 1-2 чайной ложке в день), так и применять наружно, в виде компрессов, масок, полосканий.</p>
-                    <p class="describe-product">Мед с живицей - настоящее сокровище и находка для любителей хвойных, древесных ароматов и необычных насыщенных вкусов.</p>
-                    <p class="describe-product"><b class="describe-product-attention">Если вы знаете, что склонны к аллергии, пожалуйста, кушайте мед с живицей с осторожностью, наблюдая за реакцией организма.</b></p>
-                </div>
-            </div>
-            <div class="wrap-block">
-                <div class="wrap-img">
-                    <img class="product-img" src="img/candle.jpg" width="448" height="299" alt="svechi iz voska">
-                </div>
-                <div class="about-product">
-                    <h2 class="title-product">Свеча из пчелиного воска</h2>
-                    <h4 class="annotation-product">Для тепла и красоты</h4>
-                    <p class="describe-product">Бывает, так хочется живого тепла и красоты простых вещей. В такие моменты очень уместно зажечь свечи из натурального пчелиного воска, почувствовать непередаваемый словами теплый алтайский аромат. От живого огня становится спокойнее на душе и чище в голове.</p>
-                    <p class="describe-product">Из расплавившегося воска можно смастерить еще что-то полезное, например, согревающий бальзам с медом, или провощить ткань и использовать ее вместо пищевой пленки на кухне.</p>
-                </div>
-            </div>
-            <div class="wrap-block" id="candle-soap">
-                <div class="wrap-img">
-                    <img class="product-img" src="img/soap1.jpg" width="448" height="299" alt="milo s naturalnim medom">
-                </div>
-                <div class="about-product">
-                    <h2 class="title-product">Мыло с натуральным мёдом</h2>
-                    <h4 class="annotation-product">Нежное очищение вашей кожи</h4>
-                    <p class="describe-product">Мыло, приготовленное вручную с добавлением натурального мёда, неприменно порадует вас не только чистотой и нежностью кожи после его использования, но и дивным ароматом настоящего алтайского меда, присутствующего в его составе.</p>
-                    <p class="describe-product">Кстати, мыло сделала для вас <a href="#altai" class="describe-product-link">Татьяна,</a> хозяйка той самой пасеки в Шульгин-логе, откуда родом волшебный <a href="#assortment" class="describe-product-link">мед</a>.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="quality">
-            <div class="wrap-doc-info">
-                <h2>Сертификация</h2>
-                <h4 class="annotation">Официальные документы и награды</h4>
-                <button type="radio" id="btn-1" class="name-document">Аттестат</button>
-                <p class="about-document">В соответствии аттестатом аккредитации в республиканской ветеринарной лаборатории, показатель диастазного
-                    числа равен 43.82 ед. Готе, что говорит об очень высоком качестве и биологической ценности мёда.</p>
-                <button type="radio" id="btn-2" class="name-document">Сертификат</button>
-                <p class="about-document">В соответствии сертификатом аккредитации в республиканской ветеринарной лаборатории, показатель диастазного
-                    числа равен 43.82 ед. Готе, что говорит об очень высоком качестве мёда. </p>
-                <button type="radio" id="btn-3" class="name-document">Награда</button>
-                <p class="about-document">За участие в национальном .... </p>
-            </div>
-            <div class="doc-wrap">
-                <div class="attestate">
-                    <img src="img/acreditation1.jpg" alt="Аттестат">
-                    <button class="close-btn" type="button" title="Закрыть"></button>
-                </div>
-                <div class="sertificate">
-                    <img src="img/acreditation1.jpg"  alt="Сертификат">
-                    <button class="close-btn2" type="button" title="Закрыть"></button>
-                </div>
-                <div class="reward">
-                    <img src="img/acreditation1.jpg" alt="Награда">
-                    <button class="close-btn3" type="button" title="Закрыть"></button>
-                </div>
-            </div>
-        </section>
-        <section id="distributers">
-            <h2 class="distributers-title">Мед можно купить, связавшись</h2>
-            <div class="distributer-wrap">
-                <div class="distributer-card" id="altai">
-                    <p class="title-city">в Горно-Алтайске</p>
-                    <p class="distributer-name">с Татьяной</p>
-                    <img class="city-avatar" src="img/Tanya.jpg" alt="Татьяна Ганова">
-                    <div class="distributers-contact">
-                        <a href="" class="contact-phone"><img src="img/call.svg" alt="" class="social-icon-distributors"></a>
-                        <a href="https://vk.com/id15757952" class="contact-vk"><img src="img/vk.svg" alt="" class="social-icon-distributors"></a>
-                        <a href="#" class="contact-phone"></a>
-                        <a href="#" class="contact-ok"><img src="img/odnoklassniki.svg" alt="ok" class="social-icon-distributors"></a>
-                    </div>
-                </div>
-                <div class="distributer-card">
-                    <p class="title-city">в Санкт-Петербурге</p>
-                    <p class="distributer-name">с Александрой</p>
-                    <img class="city-avatar" src="img/sasha.jpg" alt="Александра Катушкова">
-                    <div class="distributers-contact">
-                        <a href="" class="contact-phone"><img src="img/call.svg" alt="" class="social-icon-distributors"></a>
-                        <a href="https://www.facebook.com/sasha.katushkova" class="contact-fb"><img src="img/facebook.svg" alt="" class="social-icon-distributors"></a>
-                        <a href="#" class="contact-phone"></a>
-                        <a href="https://vk.com/nevidannoe" class="contact-vk"><img src="img/vk.svg" alt="" class="social-icon-distributors"></a>
-                    </div>
-                </div>
-                <div class="distributer-card">
-                    <p class="title-city">в Калуге</p>
-                    <p class="distributer-name">с Натальей</p>
-                    <img class="city-avatar" src="img/bee.svg" alt="Наталья Катушкова">
-                    <div class="distributers-contact">
-                        <a href="" class="contact-phone"><img src="img/call.svg" alt="" class="social-icon-distributors"></a>
-                        <a href="https://www.facebook.com/katushkova.n" class="contact-fb"><img src="img/facebook.svg" alt="" class="social-icon-distributors"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div id="map">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4297b89e956edfef86c976833cacec251ba267c5e2bff98f14199184b13759fa&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-            <section class="contacts">
-                <!-- <p>Оставайтесь с нами на связи!</p>
-                <p class="e-mail">jurist04@mail.ru</p>
-                <p class="phone">8 903 956 79 73</p> -->
-            </section>
-            <section class="social">
-                <!-- <a href="#" class="social-link"><img src="img/odnoklassniki.svg" alt="ok" class="social-icon"></a>
-                <a href="https://vk.com/altaybees" class="social-link"><img src="img/vk.svg" alt="" class="social-icon"></a>
-                <a href="https://www.facebook.com/Altaybees/" class="social-link"><img src="img/facebook.svg" alt="" class="social-icon"></a> -->
-            </section>
-        </div>
-    </footer>
-    <script src="Honey.js"></script>
+        burger.addEventListener('click' , () => {
+            if(!burger.classList.contains('menu-on')) {
+            burger.classList.add('menu-on')
+            mobileMenu.classList.add('show-menu')
+            burger.classList.add('animation-on')
+            } else if (burger.classList.contains('menu-on')) {
+            burger.classList.remove('menu-on')
+            mobileMenu.classList.remove('show-menu')
+            }
+        })
+
+    </script>
 </body>
-
 </html>
