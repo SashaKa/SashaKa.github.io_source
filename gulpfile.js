@@ -1,11 +1,26 @@
 const gulp = require('gulp');
 const gutil = require('gulp-util');
 const plugins = require('gulp-load-plugins')();
+const imagemin = require('gulp-imagemin');
 
 gulp.task('default', () => {
   gulp.watch('src/less/*.less', ['build-css-from-less']);
   gulp.watch('build/*.html', ['validate-html']);
 });
+
+gulp.task('images', () => {
+  return gulp
+  .src('src/img/**/*.{jpg,png,svg,JPG}')
+  .pipe(
+    plugins.imagemin({
+      progressive: true,
+      optimizationLevel: 10,
+   
+    })
+  )
+   .pipe(gulp.dest('build/img'))
+});
+
 
 gulp.task('build-css-from-less', () => {
   return gulp
