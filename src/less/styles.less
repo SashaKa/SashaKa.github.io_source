@@ -110,43 +110,11 @@ body {
 }
 .menu__mobile-logo {
 
-    // .screen(320px, 768px, {
-    //         display: block;
-    //     });
-
+   
     .screen(768px, 2220px, {
             display: none;
         });
 }
-
-// .show-menu {
-//     visibility: visible;
-//     left: 0;
-//     z-index: 2;
-// }
-
-// .burger-img {
-//     width: 40px;
-//     height: 40px;
-//     display: block;
-//     background: url('../img/menu-button.svg') no-repeat center;
-//     background-size: cover;
-//     cursor: pointer;
-//     position: relative;
-//     margin: 0 auto;
-// }
-// .animation-on {
-//    animation: burger-rotate .4s; 
-// }
-
-// @keyframes burger-rotate {
-//     0% {
-//         transform: rotateX(-180deg);
-//     }
-//     100% {
-//         transform: translateY(90deg);
-//     }
-// }
 
 
 // ------------------WORKS SECTION---------------------
@@ -156,30 +124,29 @@ input[type=radio] {
 }
 .switch-lang { 
     border-bottom: 2px;
-    margin: 2rem 0;
+    margin: 1rem 0;
     cursor: pointer;
     font-size: 1.5rem;
-    font-weight: 200;
-
-    &:first-child {
-         margin-left: 10%;
-
-         .screen(320px, 768px,{
-            margin-left: 0;
-        });
-    }
+    font-weight: 200;  
     
     &:hover {
-        color: @active-color;
-        border-bottom: 2px solid #9da15e;
+        color: rgba(255, 0, 247, 0.84);
+       
     }
     &:checked {
-        color: @active-color;
+        color: rgba(255, 0, 247, 0.84);;
     }
-   
-
-
 }
+
+label[for="english"] {
+        margin-left: 45%;
+
+        .screen(320px, 768px, {
+            margin-left: 0;
+        });
+}
+    
+  
  #english:checked ~ .about-wrapper .english{
    display: block;
 }
@@ -361,22 +328,30 @@ input[type=radio] {
 }
 
 .github {
-    background-position: -219px 1px;
+    background-position: -82px -214px;
     &:hover {
-        background-position: -219px -73px;
+        background-position: 0px -214px;
     }
 }
 .twitter {
-     background-position: -147px -145px;
+     background-position:-78px 7px;
     &:hover {
-        background-position: -147px -218px;
+        background-position: 0px 7px;
     }
 }
 .telegram {
-     background-position: -219px -143px;
+     background-position: -78px -57px;
     &:hover {
-        background-position:  -219px -218px;
+        background-position: 0px -57px;
+
     }
+}
+.codepen {
+    background-position:-82px -136px;
+    &:hover {
+        background-position: 0px -136px;
+    }
+
 }
 
 .about-wrapper {
@@ -393,7 +368,7 @@ input[type=radio] {
     align-items: center;
 }
 .about-hello {
-    font-size: 2rem;
+    font-size: 3.2rem;
     line-height: 2rem;
     font-weight: 300;
     text-shadow: 1px 1px rgba(255, 0, 247, 0.84);
@@ -402,6 +377,7 @@ input[type=radio] {
     width: 200px;
     border-radius: 50%;
     font-weight: 300;
+    margin-top: 2rem;
 }
 .about-text {
     color: @text-color;
