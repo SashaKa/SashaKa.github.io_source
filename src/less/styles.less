@@ -9,6 +9,9 @@
 
 
 
+
+
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700&subset=cyrillic');
 
 
@@ -42,6 +45,7 @@ body {
         padding: 1%;
     });
 }
+
 //  -------------------MENU-------------------------
 .menu__list {
     list-style: none;
@@ -362,6 +366,7 @@ label[for="english"] {
          padding: 0 5rem;
     });
 }
+
 .about-block {
     display: flex;
     flex-direction: column;
@@ -373,12 +378,7 @@ label[for="english"] {
     font-weight: 300;
     text-shadow: 1px 1px rgba(255, 0, 247, 0.84);
 }
-.about-photo {
-    width: 200px;
-    border-radius: 50%;
-    font-weight: 300;
-    margin-top: 2rem;
-}
+
 .about-text {
     color: @text-color;
     font-size: 1.2rem;
@@ -402,4 +402,55 @@ label[for="english"] {
     .fa {
         font-size: 1.2rem;
     }
+}
+
+// //////////////////////  CV  ////////////
+.site-wrapper-cv {
+     margin: 0 auto;
+    padding: 10% 3%;
+   background-color: rgb(255, 255, 255);
+    max-width: 70em;
+    color: darken(@text-color, 80%);
+
+    .screen(1024px, 2220px, {
+        padding: 1%;
+    });
+
+}
+.header-cv {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.header-cv__title {
+   font-size: 29px;
+    margin: 0 auto;
+}
+
+.header-cv__contacts {
+    display: flex;
+    flex: 1 1 50%;
+    align-items: baseline;
+    justify-content: space-around;
+    font-size: 26px;
+}
+.header-cv__mail {
+
+}
+.header-photo {
+    width: 200px;
+    border-radius: 50%;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+.header-cv__btn {
+    margin: 0 auto;
+}
+.header-cv__pdf-btn {
+    color: #ffffff;
+    font-size: 24px;
+    background-color: @main-color;
+    text-decoration: none;
+    padding: 10px 12px;
+
 }
