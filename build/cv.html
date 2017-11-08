@@ -14,15 +14,12 @@
             <div class="header-cv__title">
                 <h1 class="header-name">Александра Катушкова
                 </h1>
-                <!-- <img src="img/photo-cv.jpg" alt="Саша Катушкова" class="header-photo"> -->
+                <img src="img/photo-cv.jpg" alt="Саша Катушкова" class="header-photo">
             </div>
             <div class="header-cv__contacts">
                 <p class="header-cv__phone">+7 900 637-87-43</p>
-                <p href="#" class="header-cv__mail">katushkovasa@gmail.com</p>
-            </div>
-            <div class="header-cv__btn">
-                <a href="#" class=" header-cv__pdf-btn">Версия PDF</a>      
-            </div>  
+                <p class="header-cv__mail">katushkovasa@gmail.com</p>
+            </div> 
         </div>
         <div class="main-cv">
             <article class="profile">
@@ -33,21 +30,26 @@
             </article>
             <article class="technical">
                 <h2 class="technical__title title-article">Профессииональные навыки</h2>
-                <ul class="technical__skills">
-                    <li class="technical__skill">Адаптивная верстка</li>
-                    <li class="technical__skill">HTML5</li>
-                    <li class="technical__skill">CSS3</li>
-                    <li class="technical__skill">BEM</li>
-                    <li class="technical__skill">SVG</li>
-                    <li class="technical__skill">Gulp</li>
-                    <li class="technical__skill">Less</li>
-                    <li class="technical__skill">JS for UI</li>
-                    
-                    <li class="technical__skill">Git</li>
-                    <li class="technical__skill">Photoshop</li>
-                    <li class="technical__skill">Sketch</li>
-                    <li class="technical__skill">InVisionApp</li>
-                </ul>
+                <div class="technical-lists">
+                    <ul class="technical__skills first-column">
+                        <li class="technical__skill">Адаптивная верстка</li>
+                        <li class="technical__skill">HTML5</li>
+                        <li class="technical__skill">CSS3</li>
+                        <li class="technical__skill">BEM</li>
+                    </ul>
+                    <ul class="technical__skills second-column">
+                        <li class="technical__skill">Gulp</li>
+                        <li class="technical__skill">Less</li>
+                        <li class="technical__skill">JS for UI</li>
+                        <li class="technical__skill">Git</li>
+                    </ul>
+                    <ul class="technical__skills third-column">
+                        <li class="technical__skill">SVG</li>
+                        <li class="technical__skill">Photoshop</li>
+                        <li class="technical__skill">Sketch</li>
+                        <li class="technical__skill">InVisionApp</li>
+                    </ul>    
+                </div>
             </article>
             <article class="education">
                 <h2 class="education__title title-article">Образование</h2> 
@@ -136,7 +138,9 @@
                 </p>
             </article>
         </div>
-    
+        <div class="cv__btn">
+            <a href="#" class="cv__pdf-btn">Версия PDF</a>
+        </div>
     </div>
 </body>
 </html>
