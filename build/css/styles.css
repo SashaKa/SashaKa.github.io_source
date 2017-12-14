@@ -10,6 +10,9 @@ body {
   line-height: 1.5;
   font-family: 'Source Sans Pro', sans-serif;
 }
+li {
+  list-style: none;
+}
 .site-wrapper {
   margin: 0 auto;
   padding: 1% 3%;
@@ -171,8 +174,9 @@ label[for='english'] {
     min-width: 15rem;
   }
 }
+
 .works-list__item:hover {
-  outline: 3px solid #b0b881;
+  outline: 2px solid rgba(211, 84, 209, 0.84);
 }
 .works-screen {
   -o-object-fit: cover;
@@ -282,11 +286,15 @@ label[for='english'] {
   font-weight: 300;
   text-shadow: 1px 1px rgba(255, 0, 247, 0.84);
 }
-.about-text {
+.about-text,
+.about-item {
   color: #d6e5ab;
   font-size: 1.2rem;
   line-height: 1.8;
   font-weight: 300;
+}
+.about-item {
+  list-style: none;
 }
 .about-header {
   font-weight: 500;
@@ -403,10 +411,50 @@ label[for='english'] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+}
+
+@media (min-width: 320px) and (max-width: 590px) {
+  .technical-lists {
+    flex-direction: column;
+  }
 }
 .technical__skills {
   margin: 25px;
+}
+.technical__skill {
+  position: relative;
+  font-size: 18px;
+}
+.technical__skill::before {
+  position: absolute;
+  content: '';
+  background-color: #9ca15d;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: -23px;
+  top: 5px;
+}
+.item__year {
+  position: relative;
+  margin-left: 30px;
+}
+.item__year::before {
+  position: absolute;
+  content: '';
+  background-color: #9ca15d;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  left: -30px;
+  top: 30px;
+}
+.expirience__list li {
+  list-style: none;
+}
+ul {
+  padding-left: 0;
 }
